@@ -25,6 +25,10 @@ var server = http.createServer(function(req,res) {
     resData.data = "Hello, " + splitPath[2];
   }
 
+  if(splitPath[1] === "greet" && req.method === 'POST') {
+    
+  }
+
   res.writeHead(resData.status || 404, {
     'Content-Type': resData.contentType || 'text/plain'
   });
